@@ -34,9 +34,9 @@ example_numbers = [1, 2, 3, -2, -2, 2, None, -3, 4, 4, None, 3, 3, 2, 2, 1]
 # the other functions together to create the graph.
 # This will give you an idea of the flow of the program.
 def generate_frequency_graph(numbers):
-  integers = get_only_integers(numbers)
-  positive_integers = convert_negatives_to_positives(integers)
-  number_frequency = calc_frequency_of_numbers(positive_integers)
+  integers = get_only_integers(numbers) # filter
+  positive_integers = convert_negatives_to_positives(integers) # map
+  number_frequency = calc_frequency_of_numbers(positive_integers) # reduce
   graph = format_graph(number_frequency)
   return graph
 
